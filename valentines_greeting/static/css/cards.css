@@ -1,0 +1,176 @@
+/* Ensure the navbar does not overlap with content */
+body {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Card Details Page */
+.details {
+    text-align: center;
+    padding: 60px 20px 20px; /* Adjusted top padding for space below navbar */
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f1f7; /* Light pink background */
+    height: calc(100vh - 80px); /* Adjusted height */
+    text-align: center;
+    margin-top: 80px; /* Pushes form below the navbar */
+    position: relative;
+    z-index: 1;
+}
+
+.details h1 {
+    font-size: 2.2rem; /* Slightly smaller title */
+    color: #f44336; /* Deep red */
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive; /* Romantic cursive font */
+    letter-spacing: 1px; /* Reduced spacing for elegance */
+}
+
+/* Card Container */
+.card {
+    background-color: #fff;
+    padding: 15px 20px; /* Reduced padding for a shorter card */
+    margin: 20px auto;
+    border-radius: 12px; /* Slightly smaller radius for more subtle curves */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    text-align: center;
+    width: 90%;
+    max-width: 280px; /* Reduced card width */
+    height: auto; /* Flexible height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f44336; /* Border matching theme color */
+    cursor: pointer; /* Make card clickable */
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote Style */
+#quote {
+    font-style: italic;
+    font-size: 1.1rem; /* Slightly smaller font */
+    color: #9c27b0; /* Soft purple */
+    margin-bottom: 15px;
+    font-family: 'Cursive', sans-serif;
+}
+
+/* Image Styling */
+#images {
+    max-width: 100%;
+    height: auto; /* Ensure image is not stretched */
+    max-height: 200px; /* Reduced max height to make the card shorter */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08); /* Softer shadow around image */
+}
+
+/* No Image Available */
+.no-image {
+    color: #e91e63; /* Light pink for no image text */
+    font-size: 1rem; /* Smaller font size */
+    font-weight: 600;
+}
+
+/* Card Name */
+h2 {
+    color: #e91e63; /* Light pink for names */
+    font-size: 1.4rem; /* Slightly smaller size */
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: 'Dancing Script', cursive; /* Romantic cursive */
+}
+
+/* Date Styling */
+h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Status Styling */
+#status {
+    color: #4caf50; /* Green for accepted status */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+/* Rejected Status */
+h6 {
+    font-size: 1.2rem;
+    color: #f44336; /* Red for rejection */
+    font-weight: 600;
+}
+
+/* Action Buttons */
+.actions {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #e91e63; /* Light pink */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Smaller padding */
+    border-radius: 30px;
+    font-size: 1rem; /* Smaller font size */
+    cursor: pointer;
+    margin: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #d81b60; /* Darker pink for hover effect */
+    transform: scale(1.05);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Heart Icon Style for Buttons */
+button::before {
+    content: "❤";
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #card {
+        width: 80%;
+        margin: 15px auto;
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #quote {
+        font-size: 1rem;
+    }
+
+    h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+

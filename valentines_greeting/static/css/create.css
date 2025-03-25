@@ -1,0 +1,91 @@
+/* Ensure navbar does not overlap */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix navbar positioning */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust main container to prevent overlap */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Adjusted height */
+    text-align: center;
+    margin-top: 130px; /* Pushes form below the navbar */
+}
+
+/* Welcome Heading */
+.form h1 {
+    font-size: 2rem;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+/* Form container */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input fields */
+.card input,
+.card textarea,
+.card select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+/* Input focus effect */
+.card input:focus,
+.card textarea:focus,
+.card select:focus {
+    border-color: #e91e63;
+    outline: none;
+    box-shadow: 0 0 5px rgba(233, 30, 99, 0.5);
+}
+
+/* Submit button */
+.card button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #d81b60;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+}

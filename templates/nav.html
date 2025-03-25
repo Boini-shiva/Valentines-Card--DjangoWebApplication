@@ -1,0 +1,28 @@
+{% load static %}
+<nav>
+    <ul id="nav_list">
+        <div id="logo">
+            <img src="{% static 'assets/p12teddycat.webp' %}" alt="Valentine's Day Logo" id="icon">
+            <h1><span id="oneword">Valentines</span>❤️<span id="twoword">Card</span></h1>
+        </div>
+        
+        <div id="hsign">
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'home' %}" class="det" title="Home Page"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="{% url 'card_details' %}" class="det" title="View Cards"><i class="fas fa-gift"></i> Cards</a></li>
+            <li><i class="fas fa-user" style="color: aliceblue;"> <span>Welcome, {{ user.username }}</span></i></li> <!-- User Welcome with Icon -->
+                <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            
+            {% else %}
+                {% if request.resolver_match.url_name == "signup" %}
+                    
+                {% elif request.resolver_match.url_name == "login" %}
+                    
+                {% else %}
+                    <li><a href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Signup</a></li>
+                    <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                {% endif %}
+            {% endif %}
+        </div>
+    </ul>
+</nav>

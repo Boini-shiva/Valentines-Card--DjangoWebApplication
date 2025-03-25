@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Navbar */
+#nav_list {
+    height: 14vh;
+    width:100vw;
+    background: #ff4d6d; /* Soft red-pink */
+    padding: 15px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+}
+/* Logo */
+#logo {
+    padding: 1px;
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    
+}
+#icon {
+    height: 80px;
+    width: 140px;
+  }
+  
+  #oneword, #twoword {
+    font-size: 40px;
+  }
+
+/* Navigation Links */
+#hsign {
+    flex-basis: 65%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    margin-right: 20px;
+    gap:150px;
+    
+}
+
+#nav_list li {
+    display: flex;
+}
+
+#nav_list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+#nav_list a:hover {
+    background: #ff758f;
+}
+
+/* User Greeting */
+#nav_list span {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    #nav_list {
+        flex-direction: column;
+        text-align: center;
+    }
+    #hsign {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Main Content */
+#main {
+    flex: 1;
+    height:80vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url('../assets/green4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    overflow-y: auto; 
+    margin-bottom: 6vh; /* Prevent overlap with footer */
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    height: 6vh;
+    width: 100%;
+    background-color: #ff758f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(14, 45, 202);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    font-weight: bold;
+}

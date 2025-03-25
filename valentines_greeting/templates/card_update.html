@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/update.css' %}">
+{% endblock style %}
+{% block content %}
+<div class="form">
+    <h1>Welcome To Edit Greeting</h1>
+<form action="" method="post" enctype="multipart/form-data" class="card">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">UPDATE</button>
+</form>
+</div>
+{% endblock content %}

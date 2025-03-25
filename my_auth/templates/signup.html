@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock style %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+
+    {% if messages %}
+    {% for message in messages %}
+        <p style="color: {% if message.tags == 'success' %} green {% else %} red {% endif %};">
+            {{ message }}
+        </p>
+    {% endfor %}
+    {% endif %}
+    </form>
+
+
+
+
+    <p class="li">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+
+{% endblock content %}

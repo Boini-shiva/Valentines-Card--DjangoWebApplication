@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+    <div class="details">
+        <h1>Welcome To Card Details Page</h1>
+
+        {% if datas %}
+            {% for data in datas %}
+                <div class="card">
+                    <p id="quote"><b>"{{ data.quote }}"</b></p>
+    
+                    {% if data.image %}
+                        <img src="{{ data.image.url }}" alt="Card Image" id="images">
+                    {% else %}
+                        <p class="no-image">No Image Available</p>
+                    {% endif %}
+    
+                    <h2>{{ data.name }}</h2>
+                    <h3>Proposal Date: {{ data.propose_date }}</h3>
+                    <h3>Response Date: {{ data.response_date }}</h3>
+    
+                    {% if data.status %}
+                        <h6 id="status">Accepted ❤</h6>
+                    {% else %}
+                        {% if data.propose_date == data.response_date %}
+                            <h3>Waiting for response...</h3>
+                            <div class="actions">
+                                <button id="edit-btn"><a href="{% url 'card_update' data.id %}">Update</a></button>
+                                <button id="delete-btn"><a href="{% url 'card_delete' data.id %}">Delete</a></button>
+                            </div>
+                        {% else %}
+                            <h6>Rejected 💔</h6>
+                            <button id="delete-btn"><a href="{% url 'card_delete' data.id %}">Delete</a></button>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <h2>No Cards Created</h2>
+        {% endif %}
+    </div>
+
+{% endblock content %}

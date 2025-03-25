@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock style %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <div class="welcome-container">
+        <p class="welcome-text">Hello, <strong>{{ user.username }}</strong>!</p>
+        <h2 class="heading">Welcome to the Card Creation Page</h2>
+        
+        <div class="card-container">
+            <div class="card">
+                <h3>Create a Greeting Card</h3>
+                <p>Design a heartfelt card for your loved ones.</p>
+                <div class="btn-container">
+                    <a href="{% url 'create_card' %}" class="btn">Create Now</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>View Your Cards</h3>
+                <p>See the beautiful cards you've made.</p>
+                <div class="btn-container">
+                    <a href="{% url 'card_details' %}" class="btn">View Cards</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Logout</h3>
+                <p>Sign out of your account securely.</p>
+                <div class="btn-container">
+                    <a href="{% url 'logout' %}" class="btn logout-btn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% else %}
+    <h2 class="heading">Welcome To Valentines💞 Website</h2>
+    <div class="valentine-quote">
+        <p>
+            “In the quiet of the night, I hear your laughter echo in my heart.  
+            In the warmth of the sun, I feel your love wrapped around me.  
+            You are not just a moment in my life, but a melody that never fades.  
+            Every heartbeat whispers your name, every breath carries your love.  
+            With you, love is not just a feeling—it is a forever promise.”  
+        </p>
+    </div>
+{% endif %}
+
+{% endblock %}
