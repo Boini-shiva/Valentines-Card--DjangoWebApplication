@@ -3,23 +3,26 @@
 The Valentine’s Card project is a web-based application built using Django. It allows users to create and send personalized Valentine’s greeting cards. Users can customize messages, choose themes, and share cards digitally.
 
 # Features
-# 💌 Create Personalized Cards – Users can enter a custom message and select a theme.
-# 📷 Upload Media – Option to add images or GIFs to make the card unique.
-# 🎨 Predefined Templates – Multiple pre-designed themes to choose from.
-# 🌍 Share Cards – Share via a link or download the card.
-# 🛡️ User Authentication – Secure login/signup system (if included).
-# 📜 Database Storage – Stores user-generated cards for easy retrieval.
+💌 Create Personalized Cards – Users can enter a custom message and select a theme.
+📷 Upload Media – Option to add images or GIFs to make the card unique.
+🎨 Predefined Templates – Multiple pre-designed themes to choose from.
+🌍 Share Cards – Share via a link or download the card.
+🛡️ User Authentication – Secure login/signup system (if included).
+📜 Database Storage – Stores user-generated cards for easy retrieval.
 
 # Technology Stack
-# Backend: Django (Python)
+# Backend: 
+Django (Python)
 
-# Frontend: HTML, CSS, JavaScript
+# Frontend: 
+HTML, CSS, JavaScript
 
-# Styling: Bootstrap (or Custom CSS)
+# Styling: 
+Bootstrap (or Custom CSS)
 
-# Database: SQLite (default Django DB)
+# Database: 
+SQLite (default Django DB)
 
-# Deployment: Can be hosted on Heroku, Vercel, or PythonAnywhere
 
 
 # Project Structure
