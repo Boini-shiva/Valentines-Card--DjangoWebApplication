@@ -32,11 +32,19 @@ SQLite (default Django DB)
 # Project Structure
 valentines_card/
 │── manage.py          # Django project manager
+
 │── db.sqlite3         # Database file
+
 │── requirements.txt   # Dependencies
+
 │── valentines_card/   # Main Django app
+
 │── valentines_greeting/  # App for handling greetings
+
 │── static/            # CSS, JavaScript, images
+
 │── templates/         # HTML templates
+
 │── media/             # Uploaded files
+
 │── my_auth/           # User authentication module 
